@@ -5,6 +5,7 @@ https://mxnet.incubator.apache.org/versions/master/tutorials/basic/symbol.html
 ```
 pip install mxnet
 pip install mxnet-mkl
+pip install jupyter
 ```
 # mxnet importent mathod
 ```
