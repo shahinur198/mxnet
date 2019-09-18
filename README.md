@@ -16,7 +16,8 @@ mx.sym.Pooling(data=bn3, global_pool=True, kernel=(7, 7), pool_type='avg', name=
 mx.symbol.broadcast_mul(bn3, body)
 mx.sym.identity(data=data, name='id')
 
-mx.symbol.Variable("fc7_weight", shape=(config.num_classes, config.emb_size), lr_mult=config.fc7_lr_mult, wd_mult=config.fc7_wd_mult, init=mx.init.Normal(0.01))
+mx.symbol.Variable("fc7_weight", shape=(config.num_classes, config.emb_size),
+lr_mult=config.fc7_lr_mult, wd_mult=config.fc7_wd_mult, init=mx.init.Normal(0.01))
 mx.symbol.Variable('fc7_bias', lr_mult=2.0, wd_mult=0.0)
 mx.sym.FullyConnected(data=embedding, weight = _weight, no_bias = True, num_hidden=config.num_classes, name='fc7')
 
