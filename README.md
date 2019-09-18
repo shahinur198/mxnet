@@ -19,7 +19,7 @@ mx.sym.identity(data=data, name='id')
 mx.symbol.Variable("fc7_weight", shape=(config.num_classes, config.emb_size),
 lr_mult=config.fc7_lr_mult, wd_mult=config.fc7_wd_mult, init=mx.init.Normal(0.01))
 mx.symbol.Variable('fc7_bias', lr_mult=2.0, wd_mult=0.0)
-mx.sym.FullyConnected(data=embedding, weight = _weight, no_bias = True, num_hidden=config.num_classes, name='fc7')
+mx.sym.FullyConnected(data=embedding, weight = _weight, no_bias = True, num_hidden=num_classes, name='fc7')
 
 mx.symbol.L2Normalization(_weight, mode='instance')
 mx.sym.one_hot(gt_label, depth = config.num_classes, on_value = s_m, off_value = 0.0)
