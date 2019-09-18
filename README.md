@@ -68,3 +68,11 @@ X = mx.nd.uniform(low=0, high=1, shape=(sample_count,feature_count))
 X.shape
 X.asnumpy()
 ```
+The categories for these 1000 samples are represented as integers in the 0–9 range. They are randomly generated and stored in an NDArray named ‘Y’.
+```
+Y = mx.nd.empty((sample_count,))
+for i in range(0,sample_count-1):
+  Y[i] = np.random.randint(0,category_count)
+Y.shape
+Y[0:10].asnumpy()
+```
