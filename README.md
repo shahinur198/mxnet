@@ -40,3 +40,5 @@ mx.gpu(i)
 mx.cpu()
 
 ```
+# Mxnet Tutorial
+https://medium.com/@julsimon/an-introduction-to-the-mxnet-api-part-2-ce761513124e
