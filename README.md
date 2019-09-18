@@ -45,3 +45,26 @@ https://medium.com/@julsimon/an-introduction-to-the-mxnet-api-part-2-ce761513124
 
 https://medium.com/@julsimon/an-introduction-to-the-mxnet-api-part-3-1803112ba3a8
 
+# Defining our data set
+Our (imaginary) data set is composed of 1000 data samples
+Each sample has 100 features.
+A feature is represented by a float value between 0 and 1.
+Samples are split in 10 categories. The purpose of the network will be to predict the correct category for a given sample.
+We’ll use 800 samples for training and 200 samples for validation.
+We’ll use a batch size of 10 for training and validation
+```
+import mxnet as mx
+import numpy as np
+import logging
+logging.basicConfig(level=logging.INFO)
+sample_count = 1000
+train_count = 800
+valid_count = sample_count - train_count
+feature_count = 100
+category_count = 10
+batch=10
+X = mx.nd.uniform(low=0, high=1, shape=(sample_count,feature_count))
+
+X.shape
+X.asnumpy()
+```
