@@ -76,3 +76,5 @@ for i in range(0,sample_count-1):
 Y.shape
 Y[0:10].asnumpy()
 ```
+
+export MXNET_CUDNN_AUTOTUNE_DEFAULT=0
